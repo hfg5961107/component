@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#20222c</color>
+    <color name="colorPrimaryDark">#20222c</color>
+    <color name="colorAccent">#3c98e3</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="dark_gray">#dcdcdc</color>
+
+    <color name="yellow">#efae3e</color>
+
+    <color name="blue">#3c98e3</color>
+    <color name="green">#5abf98</color>
+
+    <color name="text_color_black">#232323</color>
+    <color name="text_color_hint">#cccccc</color>
+    <color name="text_default">#767676</color>
+
+    <color name="ff7c7c7c">#ff7c7c7c</color>
+
+    <color name="color_50b8da">#50b8da</color>
+
+
+    <color name="bar_grey">#393a3e</color>
+    <color name="bar_grey_90">#dd393a3e</color>
+    <color name="black">#000000</color>
+    <color name="color_4d">#4d4d4d</color>
+    <color name="color_53">#53575e</color>
+    <color name="color_69">#999999</color>
+    <color name="color_f0">#F0F0F0</color>
+    <color name="color_f2">#F2F2F2</color>
+    <color name="color_fa">#FAFAFA</color>
+    <color name="color_orange">#E0FF6100</color>
+    <color name="color_red">#ff0000</color>
+    <color name="image_overlay_false">#20000000</color>
+    <color name="image_overlay_true">#80000000</color>
+    <color name="line_color">#EEEEEE</color>
+    <color name="tab_color_false">#9b9b9b</color>
+    <color name="tab_color_true">#FA632D</color>
+    <color name="transparent_db">#E0DBDBDB</color>
+    <color name="transparent_white">#F0FFFFFF</color>
+
+    <color name="color_f4f4f4">#f4f4f4</color>
+    <color name="color_666666">#666666</color>
+    
+    <color name="color_bfc4d1">#bfc4d1</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_cccccc">#cccccc</color>
+
+    <color name="deepDark">#222222</color>
+    <color name="keyboardBackColor">#212121</color>
+    <color name="keyboardKeyBack">#474749</color>
+    <color name="lightGray">#D3D3D3</color>
+    <color name="keyboardNormal">#1c69ac</color>
+    <color name="keyboardPress">#1296db</color>
+
+    <color name="colorGreen">#089A55</color>
+    <color name="colorBlue">#3C98E3</color>
+    <color name="colorRed">#E05E68</color>
+    <color name="colorYellow">#F5A623</color>
+    <color name="colorBlack">#222222</color>
+    <color name="colorBlackLight">#666666</color>
+    <color name="colorSub">#999999</color>
+    <color name="colorDesc">#CCCCCC</color>
+    <color name="colorLine">#EBEBEB</color>
+    <color name="colorBg">#F2F2F2</color>
+
+</resources>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SettingActivity">
+
+    <com.easymi.component.widget.CusToolbar
+        android:id="@+id/setting_ctb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="45dp" />
+
+    <LinearLayout
+        android:id="@+id/setting_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="HOST"
+                android:textColor="@color/colorBlackLight"
+                android:textSize="@dimen/sizeContent" />
+
+            <EditText
+                android:id="@+id/setting_et_host"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="start|center_vertical"
+                android:paddingStart="12dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="H5_HOST"
+                android:textColor="@color/colorBlackLight"
+                android:textSize="@dimen/sizeContent" />
+
+            <EditText
+                android:id="@+id/setting_et_h5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="start|center_vertical"
+                android:paddingStart="12dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="IMG_SERVER"
+                android:textColor="@color/colorBlackLight"
+                android:textSize="@dimen/sizeContent" />
+
+            <EditText
+                android:id="@+id/setting_et_img_server"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="start|center_vertical"
+                android:paddingStart="12dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/setting_rg"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <RadioButton
+                android:id="@+id/setting_rb_en"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="ENCRYPTION"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+
+            <RadioButton
+                android:id="@+id/setting_rb_de"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:text="DECRYPTION"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/setting_rg_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <RadioButton
+                android:id="@+id/setting_rb_1h"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="1HAxxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+
+            <RadioButton
+                android:id="@+id/setting_rb_4j"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="4ji3xxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+
+            <RadioButton
+                android:id="@+id/setting_rb_95"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="955BFxxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+
+            <RadioButton
+                android:id="@+id/setting_rb_7o"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="7Oa3xxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+
+            <RadioButton
+                android:id="@+id/setting_rb_g0"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="G0UMxxxxxxxxxxxxxxxxxxxxx"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sizeContent" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/setting_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sizeButtonHeight"
+        android:layout_below="@id/setting_ll"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/sizeButton" />
+</RelativeLayout>

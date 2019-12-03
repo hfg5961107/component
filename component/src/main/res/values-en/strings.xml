@@ -1,0 +1,128 @@
+<resources>
+        
+
+
+        
+    <string name="lib_no_more_data"> No more data Oh ~</string>
+        
+    <string name="lib_again_up"> failed, slide it and try again? (⊙_⊙)</string>
+        
+    <string name="lib_loading"> strives to load...</string>
+
+        
+    <string name="wait">Loading..</string>
+        
+    <string name="response_error"> request no response, error encoding: </string>
+        
+    <string name="out_time"> network connection timeout, check the network connection </string>
+        
+    <string name="no_internet"> network connection failed, please check the network connection </string>
+        
+    <string name="parse_error"> data exception, parsing failed </string>
+
+        
+    <string name="money_sign">¥</string>
+
+        
+    <string name="slide_arrive">slide to reach the reservation </string>
+
+        
+    <string name="cancel"> cancel </string>
+        
+    <string name="confirm"> OK </string>
+
+        
+    <string name="today">today</string>
+        
+    <string name="tomorrow">Tomorrow</string>
+        
+    <string name="houtian"> acquired </string>
+        
+    <string name="waitian">External</string>
+        
+    <string name="shi"> when </string>
+        
+    <string name="now">now</string>
+
+        
+    <string name="houtai"> is running..</string>
+
+        
+    <string name="please_edit_place">Where are you going </string>
+
+        
+    <string name="input_pingyin"> Please enter the name or pinyin </string><![CDATA[
+
+        
+        
+    ]]>
+    <string name="err_error"> network request error, error code </string>
+
+        
+    <string name="new_order"> new single </string>
+        
+    <string name="sended_order"> dispatched </string>
+        
+    <string name="accepted_order"> Ordered </string>
+        
+    <string name="to_start"> go to the reservation </string>
+        
+    <string name="arrive_start"> arrive at the reservation </string>
+        
+    <string name="to_end"> go to the destination </string>
+        
+    <string name="middle_wait"> waits halfway</string>
+        
+    <string name="arrive_end"> arrives at the destination </string>
+        
+    <string name="settled">cleared</string>
+        
+    <string name="exculated">evaluated</string>
+        
+    <string name="canceled"> canceled </string><![CDATA[
+
+        
+
+        
+    ]]><string name="no_gps">The device did not find GPS positioning chip, can not be accurately positioned </string><![CDATA[
+        
+
+        
+    ]]>
+    <string name="please_open_gps">Please enable GPS location service</string>
+        
+    <string name="ok"> OK </string>
+
+        
+    <string name="lost_net_work"> network connection has been broken </string><![CDATA[
+
+        
+        
+    ]]><string name="empty_hint"> is empty here</string><![CDATA[
+
+        
+
+        
+    ]]>
+    <string name="get_wifi_fail"> Failed to get ip address in wifi environment\n</string>
+
+        
+    <string name="unknown_error"> network out of the </string>
+        
+    <string name="update_failed"> update application failed, exit soon</string>
+        
+    <string name="down_loading">downloading...</string>
+
+    <string name="money_unit">Yuan</string>
+    <string name="dis_unit">Km</string>
+    <string name="order_dis">Order Miles:</string>
+    <string name="order_fee">Order Fee:</string>
+    <string name="key_word"> bus station | train station | airport </string>
+    <string name="down_loading_2">Download - </string>
+    <string name="new_version"> latest version: %1$s\n new version size: %2$s\n\nupdate content\n%3$s</string>
+    <string name="app_update">Apply Update</string>
+    <string name="need_update">You need to update your app to continue using\n\n</string>
+    <string name="update_now">Update Now</string>
+    <string name="be_later"> later say </string>
+    <string name="ingore_this">Ignore this version</string>
+</resources>

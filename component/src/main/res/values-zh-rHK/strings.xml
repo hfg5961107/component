@@ -1,0 +1,82 @@
+<resources>
+
+
+    <string name="lib_no_more_data">沒有更多數據了哦~</string>
+    <string name="lib_again_up">失敗了呢,上滑再試試?(⊙﹏⊙)</string>
+    <string name="lib_loading">努力加載中…</string>
+
+    <string name="wait">加載中..</string>
+    <string name="response_error">請求無響應，錯誤編碼：</string>
+    <string name="out_time">網絡連接超時，請檢查網絡連接</string>
+    <string name="no_internet">網絡連接失敗，請檢查網絡連接</string>
+    <string name="parse_error">數據異常，解析失敗</string>
+
+    <string name="money_sign">¥</string>
+
+    <string name="slide_arrive">滑動到達預約地</string>
+
+    <string name="cancel">取消</string>
+    <string name="confirm">確定</string>
+
+    <string name="today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="houtian">後天</string>
+    <string name="waitian">外天</string>
+    <string name="shi">時</string>
+    <string name="now">現在</string>
+
+    <string name="houtai">正在運行中..</string>
+
+    <string name="please_edit_place">您要去哪兒</string>
+
+    <string name="input_pingyin">請輸入名字或者拼音</string>
+
+    <string name="err_error">網絡請求錯誤,錯誤碼</string>
+
+    <string name="new_order">新單</string>
+    <string name="sended_order">已派單</string>
+    <string name="accepted_order">已接單</string>
+    <string name="to_start">前往預約地</string>
+    <string name="arrive_start">到達預約地</string>
+    <string name="to_end">前往目的地</string>
+    <string name="middle_wait">中途等待</string>
+    <string name="arrive_end">到達目的地</string>
+    <string name="settled">已結算</string>
+    <string name="exculated">已評價</string>
+    <string name="canceled">已消單</string>
+
+    <string name="no_gps">該設備未發現GPS定位芯片，無法準確定位</string>
+
+    <string name="please_open_gps">請開啟GPS定位服務</string>
+    <string name="ok">確定</string>
+
+    <string name="lost_net_work">網絡連接已斷開</string>
+
+    <string name="empty_hint">這裏空空如也</string>
+
+    <string name="get_wifi_fail">獲取wifi環境下ip地址失敗\n</string>
+
+    <string name="unknown_error">網絡出小差了</string>
+    <string name="update_failed">更新應用失敗，即將退出</string>
+    <string name="down_loading">下載中...</string>
+
+
+    <string name="money_unit">元</string>
+    <string name="dis_unit">公裏</string>
+    <string name="order_dis">訂單裏程：</string>
+    <string name="order_fee">訂單費用：</string>
+    <string name="key_word">汽車站|火車站|機場</string>
+    <string name="down_loading_2">下載中 - </string>
+    <string name="new_version">最新版本：%1$s\n新版本大小：%2$s\n\n更新內容\n%3$s</string>
+    <string name="app_update">應用更新</string>
+    <string name="need_update">您需要更新應用才能繼續使用\n\n</string>
+    <string name="update_now">立即更新</string>
+    <string name="be_later">以後再說</string>
+    <string name="ingore_this">忽略該版</string>
+
+    <string name="bus_status_new">新班次</string>
+    <string name="bus_status_begain">已出發</string>
+    <string name="bus_status_end">已結束</string>
+
+    <string name="unknown_site">未知位置</string>
+</resources>

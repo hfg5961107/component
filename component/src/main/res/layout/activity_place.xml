@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_row"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="0.0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_search"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:hint="@string/please_edit_place"
+            android:textColor="@color/white"
+            android:textColorHint="#99ffffff"
+            android:background="@mipmap/search_bg"/>
+
+        <TextView
+            android:onClick="cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/cancel"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <com.easymi.component.widget.SwipeRecyclerView
+        android:id="@+id/recyclerView"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>
