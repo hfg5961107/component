@@ -7,10 +7,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.os.Build;
-import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.view.animation.LinearInterpolator;
+
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.easymi.component.R;
 import com.easymi.component.utils.DensityUtil;

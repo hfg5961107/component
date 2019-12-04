@@ -5,10 +5,9 @@ import android.content.Intent;
 import android.os.FileObserver;
 import android.os.IBinder;
 import android.os.Process;
-import android.support.annotation.Nullable;
-import com.easymi.component.utils.Log;
-import android.widget.Toast;
 
+
+import androidx.annotation.Nullable;
 
 import com.easymi.component.app.ActManager;
 

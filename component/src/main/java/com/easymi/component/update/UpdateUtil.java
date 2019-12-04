@@ -25,8 +25,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
+
+import androidx.core.content.FileProvider;
 
 import com.easymi.component.app.XApp;
 import com.easymi.component.utils.Log;

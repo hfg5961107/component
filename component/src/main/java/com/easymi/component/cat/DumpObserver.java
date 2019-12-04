@@ -1,7 +1,8 @@
 package com.easymi.component.cat;
 
 import android.os.FileObserver;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by yinxin on 2018/3/26.

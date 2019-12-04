@@ -5,10 +5,12 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.util.AttributeSet;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
 /**
  * Created by Administrator on 2016/4/11. 旋转ImageView
  */
-public class RotateImageView extends android.support.v7.widget.AppCompatImageView {
+public class RotateImageView extends AppCompatImageView {
 
     private static final String TAG = "RotateImageView";
 

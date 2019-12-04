@@ -9,8 +9,9 @@ import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
+
+import androidx.annotation.NonNull;
 
 import com.easymi.component.utils.BitmapUtil;
 import com.easymi.component.utils.Log;

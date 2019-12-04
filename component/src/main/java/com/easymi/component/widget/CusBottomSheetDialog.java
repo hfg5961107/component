@@ -3,20 +3,21 @@ package com.easymi.component.widget;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.StyleRes;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v7.app.AppCompatDialog;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.FrameLayout;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StyleRes;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+
 import com.easymi.component.R;
 import com.easymi.component.utils.Log;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 import java.lang.reflect.Field;
 
@@ -80,7 +81,7 @@ public class CusBottomSheetDialog extends AppCompatDialog {
         if (layoutResId != 0 && view == null) {
             view = getLayoutInflater().inflate(layoutResId, coordinator, false);
         }
-        FrameLayout bottomSheet = (FrameLayout) coordinator.findViewById(android.support.design.R.id.design_bottom_sheet);
+        FrameLayout bottomSheet = (FrameLayout) coordinator.findViewById(R.id.design_bottom_sheet);
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
         bottomSheetBehavior.setBottomSheetCallback(mBottomSheetCallback);
         if (params == null) {
@@ -90,7 +91,7 @@ public class CusBottomSheetDialog extends AppCompatDialog {
         }
         // We treat the CoordinatorLayout as outside the dialog though it is technically inside
         if (shouldWindowCloseOnTouchOutside() && cancelAble) {
-            coordinator.findViewById(android.support.design.R.id.touch_outside).setOnClickListener(
+            coordinator.findViewById(R.id.touch_outside).setOnClickListener(
                     view1 -> {
                         if (isShowing()) {
                             cancel();
@@ -122,7 +123,7 @@ public class CusBottomSheetDialog extends AppCompatDialog {
                 themeId = outValue.resourceId;
             } else {
                 // bottomSheetDialogTheme is not provided; we default to our light theme
-                themeId = android.support.design.R.style.Theme_Design_Light_BottomSheetDialog;
+                themeId = R.style.Theme_Design_Light_BottomSheetDialog;
             }
         }
         return themeId;

@@ -18,17 +18,19 @@ package com.easymi.component.widget.swipeback.other;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import com.easymi.component.utils.Log;
+import com.easymi.component.widget.slidinguppanel.ViewDragHelper;
+
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.AbsListView;
 import android.widget.ScrollView;
+
+import androidx.core.view.ViewCompat;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Swipe or Pull to finish a Activity.

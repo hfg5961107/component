@@ -15,9 +15,6 @@ import android.os.IBinder;
 import android.os.Vibrator;
 import android.provider.ContactsContract;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.view.KeyCharacterMap;
@@ -26,6 +23,10 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
 
 import com.easymi.component.Config;
 import com.easymi.component.R;

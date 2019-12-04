@@ -2,18 +2,19 @@ package com.easymi.component.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.NonNull;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.ViewDragHelper;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
+
 import com.easymi.component.R;
 import com.easymi.component.utils.Log;
+import com.easymi.component.widget.slidinguppanel.ViewDragHelper;
 
 import java.lang.ref.WeakReference;
 

@@ -2,7 +2,6 @@ package com.easymi.component.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.LayoutRes;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
@@ -10,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+
+import androidx.annotation.LayoutRes;
 
 import com.easymi.component.R;
 import com.easymi.component.utils.Log;

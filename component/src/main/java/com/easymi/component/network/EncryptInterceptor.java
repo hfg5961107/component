@@ -1,7 +1,8 @@
 package com.easymi.component.network;
 
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
+
+import androidx.annotation.NonNull;
 
 import com.easymi.component.Config;
 import com.easymi.component.app.XApp;

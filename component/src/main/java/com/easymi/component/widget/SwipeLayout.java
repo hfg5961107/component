@@ -11,13 +11,15 @@ package com.easymi.component.widget;
 
 import android.content.Context;
 import android.graphics.PointF;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.FrameLayout;
+
+import androidx.core.view.ViewCompat;
+
+import com.easymi.component.widget.slidinguppanel.ViewDragHelper;
 
 /**
  * Created by ssyijiu on 2016/8/16.

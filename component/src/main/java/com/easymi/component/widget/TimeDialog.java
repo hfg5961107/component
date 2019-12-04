@@ -2,10 +2,10 @@ package com.easymi.component.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomSheetDialog;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 import com.easymi.component.R;
 import com.easymi.component.widget.wheelview.OnWheelChangedListener;
@@ -13,6 +13,7 @@ import com.easymi.component.widget.wheelview.WheelView;
 import com.easymi.component.widget.wheelview.adapter.AbstractWheelAdapter;
 import com.easymi.component.widget.wheelview.adapter.AbstractWheelTextAdapter;
 import com.easymi.component.widget.wheelview.adapter.WheelViewAdapter;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

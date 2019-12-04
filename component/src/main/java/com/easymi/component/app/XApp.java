@@ -9,9 +9,10 @@ import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Build;
-import android.support.annotation.StringRes;
-import android.support.multidex.MultiDexApplication;
 import android.text.TextUtils;
+
+import androidx.annotation.StringRes;
+import androidx.multidex.MultiDexApplication;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.baidu.tts.client.SpeechError;

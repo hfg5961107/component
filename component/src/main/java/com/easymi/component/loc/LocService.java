@@ -12,7 +12,8 @@ import android.graphics.Color;
 import android.location.Location;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;

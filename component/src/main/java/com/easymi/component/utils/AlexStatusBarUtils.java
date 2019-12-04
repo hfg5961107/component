@@ -3,13 +3,6 @@ package com.easymi.component.utils;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -17,7 +10,15 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import androidx.annotation.ColorInt;
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.easymi.component.R;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 /**
  * Copyright (C) , 2012-2018 , 四川小咖科技有限公司
@@ -375,7 +376,7 @@ public class AlexStatusBarUtils {
             toolbar.setFitsSystemWindows(true);
             CollapsingToolbarLayout.LayoutParams lp = (CollapsingToolbarLayout.LayoutParams) toolbar.getLayoutParams();
             lp.height = (int) (getStatusBarHeight(activity) +
-                    activity.getResources().getDimension(android.support.v7.appcompat.R.dimen.abc_action_bar_default_height_material));
+                    activity.getResources().getDimension(R.dimen.abc_action_bar_default_height_material));
             toolbar.setLayoutParams(lp);
 
             setTranslucentStatusViewToAct(activity, 0);

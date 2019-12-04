@@ -1,13 +1,14 @@
 package com.easymi.component.widget;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.easymi.component.R;
 import com.easymi.component.utils.Log;
