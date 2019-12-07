@@ -52,7 +52,7 @@ task clean(type: Delete) {
 ext {
     supportLibraryVersion = '29.0.2'    //support库的版本
     compileSdkVersion = 29
-    minSdkVersion = 15
+    minSdkVersion = 17
     targetSdkVersion = 29
 
     pandora = "com.github.whataa:pandora:v2.0.5"
@@ -93,7 +93,7 @@ ext {
     viewanimator = 'com.github.florent37:viewanimator:1.0.0@aar'
     BaseRecyclerViewAdapterHelper = 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     androidProcesses = 'com.jaredrummler:android-processes:1.1.1'
-    pictureSelector = 'com.github.LuckSiege.PictureSelector:picture_library:v2.3.7'
+    pictureSelector = 'com.github.LuckSiege.PictureSelector:picture_library:v2.3.8'
 
     //mqtt
     mqtt = 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'

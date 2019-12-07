@@ -25,7 +25,6 @@ import com.easymi.component.R;
 import com.easymi.component.activity.SettingActivity;
 import com.easymi.component.db.SqliteHelper;
 import com.easymi.component.loc.LocService;
-import com.easymi.component.tts.InitConfig;
 import com.easymi.component.tts.NonBlockSyntherizer;
 import com.easymi.component.tts.OfflineResource;
 import com.easymi.component.utils.CsEditor;
@@ -36,6 +35,7 @@ import com.easymi.component.utils.StringUtils;
 import com.easymi.component.utils.SysUtil;
 import com.jaredrummler.android.processes.AndroidProcesses;
 import com.tencent.bugly.crashreport.CrashReport;
+
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -138,26 +138,11 @@ public class XApp extends MultiDexApplication {
 
 
         ARouter.init(this);
-        SqliteHelper.init(this);
+//        SqliteHelper.init(this);
+//
+//        initDataBase();
 
-        initDataBase();
-
-        CrashReport.initCrashReport(getApplicationContext(), "28ff5239b4", true);
-
-        int lastVersion = getMyPreferences().getInt(Config.SP_VERSION, 0);
-        int current = SysUtil.getVersionCode(this);
-
-//        if (current == 9500) {
-//            ZCSetting.deleteAll();
-//        }
-//        getEditor().putString("getMqttTemp","");
-        if (current > lastVersion) {
-            getEditor().clear()
-                    .putLong(Config.SP_DRIVERID, -1)
-                    .putBoolean(Config.SP_ISLOGIN, false)
-                    .putInt(Config.SP_VERSION, current)
-                    .apply();
-        }
+//        CrashReport.initCrashReport(getApplicationContext(), "28ff5239b4", true);
 
         if (Build.VERSION.SDK_INT >= 26) {
             String channelId = getPackageName() + "/pushChannel";
@@ -171,6 +156,7 @@ public class XApp extends MultiDexApplication {
                 mNotificationManager.createNotificationChannel(notificationChannel);
             }
         }
+
     }
 
 
@@ -254,79 +240,79 @@ public class XApp extends MultiDexApplication {
         return offlineResource;
     }
 
-    /**
-     * 初始化讯飞语音
-     */
-    public void initBaiduTTs() {
-        if (isInti) {
-            return;
-        }
-        Log.e("XApp", "initBaiduTTs");
-        isInti = true;
-        // 设置初始化参数
-        // 此处可以改为 含有您业务逻辑的SpeechSynthesizerListener的实现类
-        SpeechSynthesizerListener listener = new SpeechSynthesizerListener() {
-            @Override
-            public void onSynthesizeStart(String s) {
-
-            }
-
-            @Override
-            public void onSynthesizeDataArrived(String s, byte[] bytes, int i) {
-
-            }
-
-            @Override
-            public void onSynthesizeFinish(String s) {
-
-            }
-
-            @Override
-            public void onSpeechStart(String s) {
-                isSpeeching = true;
-            }
-
-            @Override
-            public void onSpeechProgressChanged(String s, int i) {
-
-            }
-
-            @Override
-            public void onSpeechFinish(String s) {
-                isSpeeching = false;
-//                if (voiceList != null && !voiceList.isEmpty()) {
-//                    syntheticVoice(voiceList.removeFirst());
-//                }
-                abandonFocus();
-            }
-
-            @Override
-            public void onError(String s, SpeechError speechError) {
-
-            }
-        };
-
-        Map<String, String> params = getParams();
-
-        InitConfig initConfig = new InitConfig(Config.TTS_APP_ID, Config.TTS_APP_KEY, Config.TTS_APP_SECRET, TtsMode.MIX, params, listener);
-
-        // 此处可以改为MySyntherizer 了解调用过程
-        mSpeechSynthesizer = new NonBlockSyntherizer(this, initConfig);
-
-        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-
-        mFocusChangeListener = focusChange -> {
-            if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
-                // Pause playback
-            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
-                // Stop playback
-            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
-                // Lower the volume
-            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
-                // Resume playback or Raise it back to normal
-            }
-        };
-    }
+//    /**
+//     * 初始化讯飞语音
+//     */
+//    public void initBaiduTTs() {
+//        if (isInti) {
+//            return;
+//        }
+//        Log.e("XApp", "initBaiduTTs");
+//        isInti = true;
+//        // 设置初始化参数
+//        // 此处可以改为 含有您业务逻辑的SpeechSynthesizerListener的实现类
+//        SpeechSynthesizerListener listener = new SpeechSynthesizerListener() {
+//            @Override
+//            public void onSynthesizeStart(String s) {
+//
+//            }
+//
+//            @Override
+//            public void onSynthesizeDataArrived(String s, byte[] bytes, int i) {
+//
+//            }
+//
+//            @Override
+//            public void onSynthesizeFinish(String s) {
+//
+//            }
+//
+//            @Override
+//            public void onSpeechStart(String s) {
+//                isSpeeching = true;
+//            }
+//
+//            @Override
+//            public void onSpeechProgressChanged(String s, int i) {
+//
+//            }
+//
+//            @Override
+//            public void onSpeechFinish(String s) {
+//                isSpeeching = false;
+////                if (voiceList != null && !voiceList.isEmpty()) {
+////                    syntheticVoice(voiceList.removeFirst());
+////                }
+//                abandonFocus();
+//            }
+//
+//            @Override
+//            public void onError(String s, SpeechError speechError) {
+//
+//            }
+//        };
+//
+//        Map<String, String> params = getParams();
+//
+//        InitConfig initConfig = new InitConfig(Config.TTS_APP_ID, Config.TTS_APP_KEY, Config.TTS_APP_SECRET, TtsMode.MIX, params, listener);
+//
+//        // 此处可以改为MySyntherizer 了解调用过程
+//        mSpeechSynthesizer = new NonBlockSyntherizer(this, initConfig);
+//
+//        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+//
+//        mFocusChangeListener = focusChange -> {
+//            if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
+//                // Pause playback
+//            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+//                // Stop playback
+//            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+//                // Lower the volume
+//            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+//                // Resume playback or Raise it back to normal
+//            }
+//        };
+//    }
 
     /**
      * 请求语音播放焦点
@@ -505,7 +491,7 @@ public class XApp extends MultiDexApplication {
         }
         stopVoice();
         if (mSpeechSynthesizer == null) {
-            initBaiduTTs();
+//            initBaiduTTs();
             return;
         }
         if (requestFocus() && null != mSpeechSynthesizer) {

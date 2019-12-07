@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tab_1"
+        android:enabled="true"
+        android:icon="@mipmap/icon_select_tab1"
+        app:showAsAction="ifRoom"
+        android:title="找人" />
+    <item
+        android:id="@+id/tab_2"
+        android:enabled="true"
+        android:icon="@mipmap/icon_select_tab2"
+        app:showAsAction="ifRoom"
+        android:title="找车" />
+    <item
+        android:id="@+id/tab_3"
+        android:enabled="true"
+        android:icon="@mipmap/icon_select_tab3"
+        app:showAsAction="ifRoom"
+        android:title="找司机" />
+    <item
+        android:id="@+id/tab_4"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@mipmap/icon_select_tab4"
+        android:title="找房" />
+    <item
+        android:id="@+id/tab_5"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@mipmap/icon_unselect_tab1"
+        android:title="我的" />
+</menu>
