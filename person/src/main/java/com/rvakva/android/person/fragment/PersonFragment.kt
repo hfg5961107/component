@@ -3,6 +3,7 @@ package com.rvakva.android.person.fragment
 import android.os.Bundle
 import com.easymi.component.base.RxBaseFragment
 import com.rvakva.android.person.R
+import kotlinx.android.synthetic.main.fragment_person.*
 
 /**
  * @Copyright (C), 2012-2019, Sichuan Xiaoka Technology Co., Ltd.
@@ -16,7 +17,7 @@ class PersonFragment : RxBaseFragment(){
 
 
     override fun finishCreateView(state: Bundle?) {
-
+        tv_title.setText(arguments?.getString("name"))
     }
 
     override fun getLayoutResId(): Int {

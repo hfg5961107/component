@@ -7,20 +7,28 @@ import kotlinx.android.synthetic.main.fragment_business.*
 
 /**
  * @Copyright (C), 2012-2019, Sichuan Xiaoka Technology Co., Ltd.
- * @FileName: BusinessFragment
+ * @FileName: FoundPersonFragment
  * @Author: hufeng
  * @Date: 2019-12-07 15:11
  * @Description:
  * @History:
  */
-class BusinessFragment : RxBaseFragment(){
+class FoundPersonFragment : RxBaseFragment(){
+
+     var type : Int = 0
+
+    fun newInstance(index:Int) : FoundPersonFragment{
+        var fragment = FoundPersonFragment()
+        this.type = index
+        return fragment
+    }
 
     override fun getLayoutResId(): Int {
         return R.layout.fragment_business
     }
 
     override fun finishCreateView(state: Bundle?) {
-        tv_businees_name.setText("业务："+arguments!!.get("name"))
+        tv_businees_name!!.setText("业务："+arguments!!.get("name"))
     }
 
 }

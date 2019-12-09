@@ -1,21 +1,31 @@
 package com.rvakva.android.kotlintest
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.easymi.component.base.RxBaseActivity
+import com.rvakva.android.business.fragment.FoundPersonFragment
 import com.rvakva.android.person.fragment.PersonFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : RxBaseActivity() {
 
 
-    var f1 : PersonFragment? = null
-    var f2 : PersonFragment? = null
-    var f3 : PersonFragment? = null
-    var f4 : PersonFragment? = null
-    var f5 : PersonFragment? = null
+    lateinit var f1: FoundPersonFragment
+    lateinit var f2: FoundPersonFragment
+    lateinit var f3: FoundPersonFragment
+    lateinit var f4: FoundPersonFragment
+    lateinit var f5: PersonFragment
 
+    private var currentFragment: Fragment? = null
+
+//    val mTabTitle = listOf(
+//        this.resources.getString(R.string.main_tabs_1),
+//        this.resources.getString(R.string.main_tabs_2),
+//        this.resources.getString(R.string.main_tabs_3),
+//        this.resources.getString(R.string.main_tabs_4),
+//        this.resources.getString(R.string.main_tabs_5)
+//    )
 
     override fun isEnableSwipe(): Boolean {
         return false
@@ -31,35 +41,64 @@ class MainActivity : RxBaseActivity() {
             hideAllFragment(transaction)
             when (it.itemId) {
                 R.id.tab_1 -> {
-                    setFragmentPosition(transaction,1)
+                    switchFragment(transaction, f1)
                 }
                 R.id.tab_2 -> {
-                    setFragmentPosition(transaction,2)
+                    switchFragment(transaction, f2)
                 }
                 R.id.tab_3 -> {
-                    setFragmentPosition(transaction,3)
+                    switchFragment(transaction, f3)
                 }
                 R.id.tab_4 -> {
-                    setFragmentPosition(transaction,4)
+                    switchFragment(transaction, f4)
                 }
                 R.id.tab_5 -> {
-                    setFragmentPosition(transaction,5)
+                    switchFragment(transaction, f5)
                 }
                 else -> true
             }
         }
+        initFragment()
     }
 
-    fun setFragmentPosition(transaction : FragmentTransaction,index:Int) : Boolean{
-        if(f1==null){
-            f1 = PersonFragment()
-            transaction.add(R.id.frameLayout, f1!!)
-        }else{
-            transaction.show(f1!!)
+    fun initFragment() {
+        f1 = FoundPersonFragment().newInstance(1)
+        f1.arguments?.putString("name",resources.getString(R.string.main_tabs_1))
+
+        f2 = FoundPersonFragment().newInstance(2)
+        f2.arguments?.putString("name",resources.getString(R.string.main_tabs_2))
+
+        f3 = FoundPersonFragment().newInstance(3)
+        f3.arguments?.putString("name",resources.getString(R.string.main_tabs_3))
+
+        f4 = FoundPersonFragment().newInstance(4)
+        f4.arguments?.putString("name",resources.getString(R.string.main_tabs_4))
+
+        f5 = PersonFragment()
+        f5.arguments?.putString("name",resources.getString(R.string.main_tabs_5))
+    }
+
+    private fun switchFragment(transaction: FragmentTransaction, targetFragment: Fragment): Boolean {
+        if (!targetFragment.isAdded) {
+            currentFragment?.let {
+                transaction
+                    .hide(it)
+                    .add(R.id.frameLayout, targetFragment)
+                    .commit()
+            }
+            println("还没添加呢")
+        } else {
+            currentFragment?.let {
+                transaction
+                    .hide(it)
+                    .show(targetFragment)
+                    .commit()
+            }
+            println("添加了( ⊙o⊙ )哇")
         }
+        currentFragment = targetFragment
         return true
     }
-
 
 
     //隐藏所有Fragment
@@ -79,7 +118,6 @@ class MainActivity : RxBaseActivity() {
         if (f5 != null) {
             transaction.hide(f5!!)
         }
-
     }
 
 

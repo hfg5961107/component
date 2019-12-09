@@ -7,29 +7,29 @@
         android:enabled="true"
         android:icon="@mipmap/icon_select_tab1"
         app:showAsAction="ifRoom"
-        android:title="找人" />
+        android:title="@string/main_tabs_1" />
     <item
         android:id="@+id/tab_2"
         android:enabled="true"
         android:icon="@mipmap/icon_select_tab2"
         app:showAsAction="ifRoom"
-        android:title="找车" />
+        android:title="@string/main_tabs_2" />
     <item
         android:id="@+id/tab_3"
         android:enabled="true"
         android:icon="@mipmap/icon_select_tab3"
         app:showAsAction="ifRoom"
-        android:title="找司机" />
+        android:title="@string/main_tabs_3" />
     <item
         android:id="@+id/tab_4"
         android:enabled="true"
         app:showAsAction="ifRoom"
         android:icon="@mipmap/icon_select_tab4"
-        android:title="找房" />
+        android:title="@string/main_tabs_4" />
     <item
         android:id="@+id/tab_5"
         android:enabled="true"
         app:showAsAction="ifRoom"
         android:icon="@mipmap/icon_unselect_tab1"
-        android:title="我的" />
+        android:title="@string/main_tabs_5" />
 </menu>

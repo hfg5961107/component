@@ -140,7 +140,11 @@
     <string name="driver_policy">隐私权政策</string>
 
 
-
-
+///////
+    <string name="main_tabs_1">找人</string>
+    <string name="main_tabs_2">找车</string>
+    <string name="main_tabs_3">找司机</string>
+    <string name="main_tabs_4">找房</string>
+    <string name="main_tabs_5">我的</string>
 
 </resources>

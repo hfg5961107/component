@@ -35,6 +35,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api project(path: ':person')
+    api project(path: ':business')
     implementation 'it.sephiroth.android.library.bottomnavigation:bottom-navigation:3.0.0'
 
 }
