@@ -28,7 +28,7 @@ class FoundPersonFragment : RxBaseFragment(){
     }
 
     override fun finishCreateView(state: Bundle?) {
-        tv_businees_name!!.setText("业务："+arguments!!.get("name"))
+        tv_businees_name.text = "业务：1111"
     }
 
 }

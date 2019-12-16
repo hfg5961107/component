@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.easymi.component.base.RxBaseActivity
+import com.rvakva.android.business.fragment.FoundCarFragment
+import com.rvakva.android.business.fragment.FoundDriverFragment
+import com.rvakva.android.business.fragment.FoundHouseFragment
 import com.rvakva.android.business.fragment.FoundPersonFragment
 import com.rvakva.android.person.fragment.PersonFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -12,20 +15,12 @@ class MainActivity : RxBaseActivity() {
 
 
     lateinit var f1: FoundPersonFragment
-    lateinit var f2: FoundPersonFragment
-    lateinit var f3: FoundPersonFragment
-    lateinit var f4: FoundPersonFragment
+    lateinit var f2: FoundCarFragment
+    lateinit var f3: FoundDriverFragment
+    lateinit var f4: FoundHouseFragment
     lateinit var f5: PersonFragment
 
     private var currentFragment: Fragment? = null
-
-//    val mTabTitle = listOf(
-//        this.resources.getString(R.string.main_tabs_1),
-//        this.resources.getString(R.string.main_tabs_2),
-//        this.resources.getString(R.string.main_tabs_3),
-//        this.resources.getString(R.string.main_tabs_4),
-//        this.resources.getString(R.string.main_tabs_5)
-//    )
 
     override fun isEnableSwipe(): Boolean {
         return false
@@ -36,8 +31,12 @@ class MainActivity : RxBaseActivity() {
     }
 
     override fun initViews(savedInstanceState: Bundle?) {
+        var transaction = supportFragmentManager.beginTransaction()
+
         bottomBar.setOnNavigationItemSelectedListener {
-            val transaction = supportFragmentManager.beginTransaction()
+
+            transaction = supportFragmentManager.beginTransaction()
+
             hideAllFragment(transaction)
             when (it.itemId) {
                 R.id.tab_1 -> {
@@ -59,41 +58,44 @@ class MainActivity : RxBaseActivity() {
             }
         }
         initFragment()
+
+        transaction
+            .add(R.id.frameLayout, f1)
+            .commit()
     }
 
     fun initFragment() {
         f1 = FoundPersonFragment().newInstance(1)
-        f1.arguments?.putString("name",resources.getString(R.string.main_tabs_1))
+        f1.arguments?.putString("name", resources.getString(R.string.main_tabs_1))
 
-        f2 = FoundPersonFragment().newInstance(2)
-        f2.arguments?.putString("name",resources.getString(R.string.main_tabs_2))
+        f2 = FoundCarFragment().newInstance(2)
+        f2.arguments?.putString("name", resources.getString(R.string.main_tabs_2))
 
-        f3 = FoundPersonFragment().newInstance(3)
-        f3.arguments?.putString("name",resources.getString(R.string.main_tabs_3))
+        f3 = FoundDriverFragment().newInstance(3)
+        f3.arguments?.putString("name", resources.getString(R.string.main_tabs_3))
 
-        f4 = FoundPersonFragment().newInstance(4)
-        f4.arguments?.putString("name",resources.getString(R.string.main_tabs_4))
+        f4 = FoundHouseFragment().newInstance(4)
+        f4.arguments?.putString("name", resources.getString(R.string.main_tabs_4))
 
         f5 = PersonFragment()
-        f5.arguments?.putString("name",resources.getString(R.string.main_tabs_5))
+        f5.arguments?.putString("name", resources.getString(R.string.main_tabs_5))
+
     }
 
-    private fun switchFragment(transaction: FragmentTransaction, targetFragment: Fragment): Boolean {
+    private fun switchFragment(
+        transaction: FragmentTransaction,
+        targetFragment: Fragment
+    ): Boolean {
         if (!targetFragment.isAdded) {
-            currentFragment?.let {
-                transaction
-                    .hide(it)
-                    .add(R.id.frameLayout, targetFragment)
-                    .commit()
-            }
-            println("还没添加呢")
+
+            transaction
+                .add(R.id.frameLayout, targetFragment)
+                .commit()
         } else {
-            currentFragment?.let {
-                transaction
-                    .hide(it)
-                    .show(targetFragment)
-                    .commit()
-            }
+            transaction
+                .hide(this!!.currentFragment!!)
+                .show(targetFragment)
+                .commit()
             println("添加了( ⊙o⊙ )哇")
         }
         currentFragment = targetFragment

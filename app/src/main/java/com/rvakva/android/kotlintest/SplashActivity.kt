@@ -116,7 +116,7 @@ class SplashActivity : RxBaseActivity() {
             }
             view.dis_agree_yinsi.setOnClickListener { v ->
                 yinSiDialog.dismiss()
-                showOnceHint()
+                finish()
             }
 
             yinSiDialog = AlertDialog.Builder(this).setView(view).create()
@@ -130,57 +130,57 @@ class SplashActivity : RxBaseActivity() {
 
     lateinit var onceHintDialog: AlertDialog
 
-    /**
-     * 第一次提醒同意隐私协议
-     */
-    private fun showOnceHint() {
-        val view = LayoutInflater.from(this).inflate(R.layout.once_hint_dialog, null, false)
-
-        val once_dis_agree = view.findViewById(R.id.once_dis_agree)
-        val once_show_yinsi = view.findViewById(R.id.once_show_yinsi)
-
-        once_dis_agree.setOnClickListener({ v ->
-            onceHintDialog.dismiss()
-            showTwiceHint()
-        })
-
-        once_show_yinsi.setOnClickListener({ v ->
-            onceHintDialog.dismiss()
-            yinSiDialog.show()
-        })
-
-        onceHintDialog = AlertDialog.Builder(this).setView(view).create()
-        onceHintDialog.setCanceledOnTouchOutside(false)
-        onceHintDialog.setCancelable(false)
-        onceHintDialog.show()
-    }
-
-     lateinit var twiceHintDialog: AlertDialog
-
-    /**
-     * 第二次提醒同意隐私协议
-     */
-    private fun showTwiceHint() {
-        val view = LayoutInflater.from(this).inflate(R.layout.twice_hint_dialog, null, false)
-
-        val twice_dis_agree = view.findViewById(R.id.twice_dis_agree)
-        val twice_show_yinsi = view.findViewById(R.id.twice_show_yinsi)
-
-        twice_dis_agree.setOnClickListener({ v ->
-            twiceHintDialog.dismiss()
-            finish()//退出应用
-        })
-
-        twice_show_yinsi.setOnClickListener({ v ->
-            twiceHintDialog.dismiss()
-            yinSiDialog.show()
-        })
-
-        twiceHintDialog = AlertDialog.Builder(this).setView(view).create()
-        twiceHintDialog.setCanceledOnTouchOutside(false)
-        twiceHintDialog.setCancelable(false)
-        twiceHintDialog.show()
-    }
+//    /**
+//     * 第一次提醒同意隐私协议
+//     */
+//    private fun showOnceHint() {
+//        val view = LayoutInflater.from(this).inflate(R.layout.once_hint_dialog, null, false)
+//
+//        val once_dis_agree = view.findViewById(R.id.once_dis_agree)
+//        val once_show_yinsi = view.findViewById(R.id.once_show_yinsi)
+//
+//        view.once_dis_agree.setOnClickListener({ v ->
+//            onceHintDialog.dismiss()
+//            showTwiceHint()
+//        })
+//
+//        view.once_show_yinsi.setOnClickListener({ v ->
+//            onceHintDialog.dismiss()
+//            yinSiDialog.show()
+//        })
+//
+//        onceHintDialog = AlertDialog.Builder(this).setView(view).create()
+//        onceHintDialog.setCanceledOnTouchOutside(false)
+//        onceHintDialog.setCancelable(false)
+//        onceHintDialog.show()
+//    }
+//
+//     lateinit var twiceHintDialog: AlertDialog
+//
+//    /**
+//     * 第二次提醒同意隐私协议
+//     */
+//    private fun showTwiceHint() {
+//        val view = LayoutInflater.from(this).inflate(R.layout.twice_hint_dialog, null, false)
+//
+//        val twice_dis_agree = view.findViewById(R.id.twice_dis_agree)
+//        val twice_show_yinsi = view.findViewById(R.id.twice_show_yinsi)
+//
+//        twice_dis_agree.setOnClickListener({ v ->
+//            twiceHintDialog.dismiss()
+//            finish()//退出应用
+//        })
+//
+//        twice_show_yinsi.setOnClickListener({ v ->
+//            twiceHintDialog.dismiss()
+//            yinSiDialog.show()
+//        })
+//
+//        twiceHintDialog = AlertDialog.Builder(this).setView(view).create()
+//        twiceHintDialog.setCanceledOnTouchOutside(false)
+//        twiceHintDialog.setCancelable(false)
+//        twiceHintDialog.show()
+//    }
 
     private fun initData() {
         rxPermissions = RxPermissions(this)
@@ -212,13 +212,13 @@ class SplashActivity : RxBaseActivity() {
                     .setTitle(getString(R.string.hint))
                     .setMessage(getString(R.string.reject_net))
                     .setCancelable(false)
-                    .setPositiveButton(getString(R.string.ok), { dialog1, which ->
+                    .setPositiveButton(getString(R.string.ok)) { dialog1, which ->
                         val intent = Intent()
                         intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
                         val uri = Uri.fromParts("package", packageName, null)
                         intent.data = uri
                         startActivity(intent)
-                    })
+                    }
                     .create()
                 dialog.show()
                 return

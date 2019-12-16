@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Component</string>
+
+    <string name="hint">提示</string>
+
+    <string name="reject_net">网络连接不可用，可能是由于您主动设置了禁用网络，请前往应用管理中打开。设置完毕后请重新启动程序</string>
+
 </resources>
