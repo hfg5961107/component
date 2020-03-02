@@ -80,9 +80,11 @@ class MainActivity : RxBaseActivity() {
         f5 = PersonFragment()
         f5.arguments?.putString("name", resources.getString(R.string.main_tabs_5))
 
+
+
     }
 
-    private fun switchFragment(
+    fun switchFragment(
         transaction: FragmentTransaction,
         targetFragment: Fragment
     ): Boolean {

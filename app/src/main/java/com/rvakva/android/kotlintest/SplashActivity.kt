@@ -305,7 +305,7 @@ class SplashActivity : RxBaseActivity() {
     private fun jump() {
         val isLogin = XApp.getMyPreferences().getBoolean(Config.SP_ISLOGIN, false)
         if (isLogin) {
-            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         } else {
             ARouter.getInstance()
                 .build("/personal/LoginActivity")

@@ -17,7 +17,7 @@ class PersonFragment : RxBaseFragment(){
 
 
     override fun finishCreateView(state: Bundle?) {
-        tv_title.setText(arguments?.getString("name"))
+        tv_title.text = arguments?.getString("name")
     }
 
     override fun getLayoutResId(): Int {
